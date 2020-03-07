@@ -7,17 +7,16 @@ function rot13(...args) {
   for (const char of input) {
     const asciiChar = char.charCodeAt(0);
     if (asciiChar >= ASCII_VALUE_A && asciiChar <= ASCII_VALUE_Z) {
-      const temp = (ASCII_VALUE_A) + ((asciiChar + ROTATION) - ASCII_VALUE_A);
-      const AsciiOfcipher = temp % (ASCII_VALUE_Z - ASCII_VALUE_A + 1);
-      const cipher = String.fromCharCode(AsciiOfcipher);
-      output += cipher;
+      const temp = ((asciiChar + ROTATION) - ASCII_VALUE_A) % (ASCII_VALUE_Z - ASCII_VALUE_A + 1);
+      const decodedAscii = ASCII_VALUE_A + temp;
+      const decodedStr = String.fromCharCode(decodedAscii);
+      output += decodedStr;
     } else {
       output += char;
     }
   }
   return output;
 }
-
 export {
   rot13,
 };
