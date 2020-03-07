@@ -9,7 +9,7 @@ function abbreviateString(str) {
     if (wordArr.length > 1) {
       const firstWordOfStr = wordArr[0];
       const lastWordOfStr = wordArr[wordArr.length - 1];
-      return `${firstWordOfStr} ${lastWordOfStr[0].toUpperCase()}'.'`;
+      return `${firstWordOfStr} ${lastWordOfStr[0].toUpperCase()}.`;
     }
     return wordArr[0];
   }
