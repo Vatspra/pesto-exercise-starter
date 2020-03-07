@@ -5,7 +5,7 @@ const rotatedString = (str1, str2) => {
   if (str1 === str2) {
     return false;
   }
-  const allPossibleRotationString = str1 + str2;
+  const allPossibleRotationString = str1 + str1;
   return allPossibleRotationString.indexOf(str2) !== -1;
 };
 
