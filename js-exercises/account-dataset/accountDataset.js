@@ -17,8 +17,7 @@ function datasetWithRoundedDollar() {
   return bankBalances.map(account => {
     const newAccount = account;
     const roundedAmount = Math.round(newAccount.amount);
-    newAccount.amount = roundedAmount;
-    newAccount.rounded = true;
+    newAccount.rounded = roundedAmount;
     return newAccount;
   });
 }
